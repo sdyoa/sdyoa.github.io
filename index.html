@@ -122,45 +122,22 @@
   .meta-line a:hover{color:var(--accent);border-color:var(--accent);}
   .dot{color:var(--ink-faint);}
 
-  /* ---------- HERO GRID (bio + contact rail) ---------- */
-  .hero-grid{
-    display:grid;grid-template-columns:1fr 168px;gap:46px;
-    align-items:start;margin-top:6px;
-  }
+  /* ---------- HERO BIO + LINKS ---------- */
+  .hero-bio{max-width:600px;margin-top:6px;}
   .hero-bio .lede{margin-bottom:16px;}
-  .lede-sub{
-    font-size:1rem;line-height:1.65;color:var(--ink-soft);max-width:560px;
-  }
+  .lede-sub{font-size:1rem;line-height:1.65;color:var(--ink-soft);}
   .hero-bio a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);transition:.2s;}
   .hero-bio a:hover{color:var(--accent);border-color:var(--accent);}
-  .hero-contact{
-    display:flex;flex-direction:column;gap:11px;padding-top:8px;
-    border-left:1px solid var(--line);padding-left:26px;
+  .hero-links{
+    display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+    margin-top:26px;font-family:var(--mono);font-size:.82rem;
   }
-  .hc-label{
-    font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--ink-faint);margin-bottom:3px;
-  }
-  .hero-contact a{
-    font-family:var(--mono);font-size:.82rem;color:var(--ink-soft);
-    text-decoration:none;transition:color .2s;
-    display:inline-flex;align-items:baseline;gap:8px;
-  }
-  .hero-contact a::before{content:'→';color:var(--accent);}
-  .hero-contact a:hover{color:var(--accent);}
+  .hero-links a{color:var(--ink-soft);text-decoration:none;transition:color .2s;}
+  .hero-links a:hover{color:var(--accent);}
+  .hero-links .dot{color:var(--ink-faint);}
   .hc-loc{
-    font-family:var(--mono);font-size:.72rem;color:var(--ink-faint);
-    letter-spacing:.04em;margin-top:8px;
-  }
-  @media(max-width:640px){
-    .hero-grid{grid-template-columns:1fr;gap:26px;}
-    .hero-contact{
-      border-left:none;padding-left:0;padding-top:20px;
-      border-top:1px solid var(--line);
-      flex-flow:row wrap;gap:9px 18px;align-items:center;
-    }
-    .hc-label{width:100%;margin-bottom:0;}
-    .hc-loc{width:100%;margin-top:2px;}
+    font-family:var(--mono);font-size:.74rem;color:var(--ink-faint);
+    letter-spacing:.04em;margin-top:10px;
   }
 
   /* ---------- METRICS ---------- */
@@ -402,30 +379,32 @@
   <div class="wrap">
     <div class="eyebrow reveal">AI Research Scientist · Builder</div>
     <h1 class="reveal">Turning frontier&nbsp;research into systems that ship.</h1>
-    <div class="hero-grid reveal">
-      <div class="hero-bio">
-        <p class="lede">
-          I am an <em>AI Research Scientist</em> at LG AI Research, where I work on
-          large language models — reasoning, reliability, and efficient inference.
-          I recently completed my M.S. at Korea University, advised by
-          Prof. Hyunwoo J. Kim.
-        </p>
-        <p class="lede-sub">
-          My research spans LLMs and foundation models, multi-agent systems,
-          LLM reliability and quantization, and machine learning for computer
-          vision and anomaly detection. Alongside research, I design and ship
-          the products and ventures that put that research to work.
-        </p>
-      </div>
-      <aside class="hero-contact">
-        <div class="hc-label">Connect</div>
-        <a href="https://www.linkedin.com/in/seungdong-yoa-992893190/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:seungdong0416@gmail.com">Email</a>
-        <a href="https://scholar.google.com/citations?user=viQIONQAAAAJ" target="_blank" rel="noopener">Scholar</a>
-        <a href="SeungdongYoa_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
-        <div class="hc-loc">Seoul, Korea</div>
-      </aside>
+    <div class="hero-bio reveal">
+      <p class="lede">
+        I am an <em>AI Research Scientist</em> at LG AI Research, where I work on
+        large language models — multi-agent reasoning, reliability, and efficient
+        inference. I recently completed my M.S. at Korea University, advised by
+        Prof. Hyunwoo J. Kim.
+      </p>
+      <p class="lede-sub">
+        My work spans language and vision — from multi-agent reasoning and LLM
+        reliability to efficient models for image recognition — and I'm
+        increasingly drawn to <strong>multimodal, interactive intelligence</strong>:
+        systems that perceive across modalities and collaborate with people and
+        one another. Alongside research, I design and ship the products and
+        ventures that put it to work.
+      </p>
     </div>
+    <div class="hero-links reveal">
+      <a href="https://www.linkedin.com/in/seungdong-yoa-992893190/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="dot">·</span>
+      <a href="mailto:seungdong0416@gmail.com">Email</a>
+      <span class="dot">·</span>
+      <a href="https://scholar.google.com/citations?user=viQIONQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      <span class="dot">·</span>
+      <a href="SeungdongYoa_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    </div>
+    <div class="hc-loc reveal">Seoul, Korea</div>
 
     <div class="metrics reveal">
       <div class="metric">
