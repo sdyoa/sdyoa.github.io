@@ -188,6 +188,28 @@
   }
   .pub-more a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line);}
   .pub-more a:hover{border-color:var(--accent);}
+
+  /* collapsible: additional papers */
+  .more-pubs{margin-top:26px;}
+  .more-pubs summary{
+    font-size:.88rem;color:var(--ink-faint);cursor:pointer;
+    list-style:none;display:inline-flex;align-items:baseline;gap:9px;
+    transition:color .2s;
+  }
+  .more-pubs summary::-webkit-details-marker{display:none;}
+  .more-pubs summary::before{
+    content:'+';font-family:var(--mono);color:var(--accent);font-size:.9rem;
+  }
+  .more-pubs[open] summary::before{content:'–';}
+  .more-pubs summary:hover{color:var(--accent);}
+  .more-list{margin-top:14px;}
+  .more-item{padding:13px 0;border-top:1px solid var(--line);}
+  .more-item .t{font-family:var(--serif);font-size:1.02rem;line-height:1.4;}
+  .more-item .a{font-size:.82rem;color:var(--ink-faint);margin-top:4px;}
+  .more-item .v{font-family:var(--mono);font-size:.66rem;color:var(--accent);letter-spacing:.05em;margin-top:4px;}
+  .more-scholar{margin-top:18px;font-size:.88rem;color:var(--ink-faint);}
+  .more-scholar a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line);}
+  .more-scholar a:hover{border-color:var(--accent);}
   @media(max-width:560px){
     .pub{grid-template-columns:1fr;gap:6px;}
     .pub-year{display:inline;margin-left:8px;}
@@ -228,6 +250,11 @@
     display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
   }
   .venture-name{font-family:var(--serif);font-size:1.18rem;}
+  a.venture-name{
+    color:var(--ink);text-decoration:none;
+    border-bottom:1px solid var(--line);transition:.2s;
+  }
+  a.venture-name:hover{color:var(--accent);border-color:var(--accent);}
   .venture-kind{
     font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;
     text-transform:uppercase;color:var(--ink-faint);
@@ -417,11 +444,27 @@
       </div>
     </div>
 
-    <p class="pub-more reveal">
-      Three additional papers (IEEE Access, 2021) on self-supervised anomaly
-      detection, surrogate losses, and meta-learning.
-      <a href="https://scholar.google.com/citations?user=viQIONQAAAAJ" target="_blank" rel="noopener">Google Scholar →</a>
-    </p>
+    <details class="more-pubs reveal">
+      <summary>Three additional papers (IEEE Access, 2021) on self-supervised anomaly detection, surrogate losses, and meta-learning</summary>
+      <div class="more-list">
+        <div class="more-item">
+          <div class="t">Self-Supervised Learning for Anomaly Detection With Dynamic Local Augmentation</div>
+          <div class="a"><strong>Seungdong Yoa</strong>, S. Lee, C. Kim, H. J. Kim</div>
+          <div class="v">IEEE ACCESS · 2021</div>
+        </div>
+        <div class="more-item">
+          <div class="t">Learning Non-Parametric Surrogate Losses With Correlated Gradients</div>
+          <div class="a"><strong>Seungdong Yoa</strong>, J. Park, H. J. Kim</div>
+          <div class="v">IEEE ACCESS · 2021</div>
+        </div>
+        <div class="more-item">
+          <div class="t">Learning to Balance Local Losses via Meta-Learning</div>
+          <div class="a"><strong>Seungdong Yoa</strong>, M. Jeon, Y. Oh, H. J. Kim</div>
+          <div class="v">IEEE ACCESS · 2021</div>
+        </div>
+      </div>
+      <p class="more-scholar">Full list on <a href="https://scholar.google.com/citations?user=viQIONQAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></p>
+    </details>
   </div>
 </section>
 
@@ -537,34 +580,38 @@
 
     <div class="venture reveal">
       <div class="venture-top">
-        <span class="venture-name">Effectgen</span>
-        <span class="venture-kind">Founder · AI Product</span>
+        <a class="venture-name" href="https://effectgen.com" target="_blank" rel="noopener">Effectgen</a>
+        <span class="venture-kind">Founder · Generative AI</span>
       </div>
       <div class="venture-desc">
-        An AI-powered generative product, taken from concept through to a
-        deployed service.
+        An AI fitting-shot studio for fashion sellers. Upload a garment, pick a
+        model template, and Effectgen renders the piece worn on the model —
+        production-ready fitting shots without a photoshoot.
       </div>
     </div>
 
     <div class="venture reveal">
       <div class="venture-top">
-        <span class="venture-name">Effectgen Homeliving</span>
-        <span class="venture-kind">Founder · AI Product</span>
+        <a class="venture-name" href="https://effectgen.com/homeliving" target="_blank" rel="noopener">Effectgen Homeliving</a>
+        <span class="venture-kind">Founder · Generative AI</span>
       </div>
       <div class="venture-desc">
-        A home-living vertical of Effectgen, applying generative AI to
-        interior and lifestyle use cases.
+        The home-goods vertical of Effectgen, for furniture sellers. Upload a
+        product image, choose an interior template, and the furniture is
+        composited naturally into the scene — generating listing-ready detail
+        and focus shots.
       </div>
     </div>
 
     <div class="venture reveal">
       <div class="venture-top">
-        <span class="venture-name">AgentMon</span>
+        <a class="venture-name" href="https://agentmon.ai" target="_blank" rel="noopener">AgentMon</a>
         <span class="venture-kind">Founder · AI Agents</span>
       </div>
       <div class="venture-desc">
-        An automation service built on AI agents and the Model Context
-        Protocol, exploring developer-first agent distribution.
+        A marketing-automation agent. Set a campaign from a Discord command and
+        it generates and posts content to X (Twitter) on a recurring schedule —
+        an experiment in always-on, agent-driven content pipelines.
       </div>
     </div>
 
