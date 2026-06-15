@@ -90,13 +90,13 @@
     display:flex;justify-content:space-between;align-items:baseline;
   }
   .nav-name{font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:.01em;}
-  .nav-links{display:flex;gap:22px;}
+  .nav-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end;}
   .nav-links a{
     color:var(--ink-soft);text-decoration:none;font-size:.82rem;
     letter-spacing:.04em;text-transform:uppercase;transition:color .2s;
   }
   .nav-links a:hover{color:var(--accent);}
-  @media(max-width:560px){.nav-links{gap:14px;}.nav-links a{font-size:.72rem;}}
+  @media(max-width:560px){.nav-links{gap:11px;}.nav-links a{font-size:.7rem;}}
 
   /* ---------- HERO ---------- */
   header{padding:96px 0 72px;}
@@ -396,6 +396,7 @@
     <span class="nav-name">Seungdong Yoa</span>
     <div class="nav-links">
       <a href="#research">Research</a>
+      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#ventures">Ventures</a>
       <a href="#contact">Contact</a>
