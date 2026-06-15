@@ -177,6 +177,27 @@
     margin:-22px 0 36px;
   }
 
+  /* ---------- NEWS ---------- */
+  .news-item{
+    display:grid;grid-template-columns:60px 1fr;gap:20px;
+    padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .news-item:last-child{border-bottom:none;}
+  .news-date{
+    font-family:var(--mono);font-size:.72rem;color:var(--accent);
+    padding-top:3px;letter-spacing:.03em;
+  }
+  .news-text{font-size:.95rem;color:var(--ink-soft);}
+  .news-text strong{color:var(--ink);font-weight:600;}
+  @media(max-width:560px){.news-item{grid-template-columns:1fr;gap:4px;}}
+
+  /* ---------- RESEARCH VISION ---------- */
+  .research-vision{
+    font-family:var(--serif);font-size:1.12rem;line-height:1.55;
+    color:var(--ink);max-width:600px;margin:-14px 0 36px;
+  }
+  .research-vision strong{color:var(--accent);font-weight:500;}
+
   /* ---------- PUBLICATIONS ---------- */
   .pub{
     padding:22px 0;border-bottom:1px solid var(--line);
@@ -427,16 +448,43 @@
   </div>
 </header>
 
+<!-- ============ NEWS ============ -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">News</h2>
+    </div>
+    <div class="news-list">
+      <div class="news-item reveal">
+        <div class="news-date">2026</div>
+        <div class="news-text">Two papers accepted — <strong>ICML 2026</strong> (efficient multi-agent reasoning) and <strong>ICLR 2026</strong> (agent-centric evaluation of LLM reasoning).</div>
+      </div>
+      <div class="news-item reveal">
+        <div class="news-date">2025</div>
+        <div class="news-text"><strong>ImagePiece</strong> accepted at <strong>AAAI 2025</strong> — content-aware re-tokenization for efficient image recognition.</div>
+      </div>
+      <div class="news-item reveal">
+        <div class="news-date">2024</div>
+        <div class="news-text">Received the <strong>LG Award</strong>, LG Group's highest honor, for the Hero LensAA deployment.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ RESEARCH ============ -->
 <section id="research">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">01</span>
+      <span class="sec-num">02</span>
       <h2 class="sec-title">Selected Research</h2>
     </div>
-    <p class="sec-intro reveal">
-      Recent work on multi-agent reasoning, LLM evaluation, and efficient
-      vision and language models. Full author lists and earlier work below.
+    <p class="research-vision reveal">
+      My long-term goal is <strong>multimodal, interactive intelligence</strong> —
+      agentic systems that perceive and reason across language and vision, stay
+      reliable in real-world use, and collaborate with people. I pursue it through
+      multi-agent reasoning, model reliability, and efficient inference that makes
+      such systems deployable.
     </p>
 
     <div class="pub reveal">
@@ -502,7 +550,7 @@
 <section id="education">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">02</span>
+      <span class="sec-num">03</span>
       <h2 class="sec-title">Education</h2>
     </div>
 
@@ -535,7 +583,7 @@
 <section id="experience">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">03</span>
+      <span class="sec-num">04</span>
       <h2 class="sec-title">Experience</h2>
     </div>
 
@@ -600,7 +648,7 @@
 <section id="ventures">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">04</span>
+      <span class="sec-num">05</span>
       <h2 class="sec-title">Ventures &amp; Building</h2>
     </div>
     <p class="sec-intro reveal">
@@ -660,7 +708,7 @@
 <section id="awards">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">05</span>
+      <span class="sec-num">06</span>
       <h2 class="sec-title">Honors</h2>
     </div>
 
@@ -694,7 +742,7 @@
 <section id="also">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">06</span>
+      <span class="sec-num">07</span>
       <h2 class="sec-title">Also</h2>
     </div>
 
