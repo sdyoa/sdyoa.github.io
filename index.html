@@ -218,6 +218,13 @@
   }
   .pub-authors{font-size:.86rem;color:var(--ink-faint);}
   .pub-authors strong{color:var(--ink-soft);font-weight:600;}
+  .pub-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:11px;}
+  .pub-links a{
+    font-family:var(--mono);font-size:.71rem;letter-spacing:.04em;
+    text-transform:uppercase;color:var(--ink-soft);text-decoration:none;
+    border-bottom:1px solid var(--line);padding-bottom:1px;transition:.2s;
+  }
+  .pub-links a:hover{color:var(--accent);border-color:var(--accent);}
   .pub-note{
     font-size:.82rem;color:var(--ink-soft);margin-top:7px;
     font-style:italic;font-family:var(--serif);
@@ -404,8 +411,7 @@
       <p class="lede">
         I am an <em>AI Research Scientist</em> at LG AI Research, where I work on
         large language models — multi-agent reasoning, reliability, and efficient
-        inference. I recently completed my M.S. at Korea University, advised by
-        Prof. Hyunwoo J. Kim.
+        inference.
       </p>
       <p class="lede-sub">
         My work spans language and vision — from multi-agent reasoning and LLM
@@ -507,6 +513,7 @@
       <div>
         <div class="pub-title">From Static Benchmarks to Dynamic Protocol: Agent-Centric Text Anomaly Detection for Evaluating LLM Reasoning</div>
         <div class="pub-authors"><strong>Seungdong Yoa</strong>, Sanghyu Yoon, Suhee Yoon, Dongmin Kim, Ye Seul Sim, Junhyun Lee, Woohyung Lim</div>
+        <div class="pub-links"><a href="https://openreview.net/forum?id=9HacBDFOjt" target="_blank" rel="noopener">OpenReview</a></div>
       </div>
     </div>
 
@@ -519,6 +526,7 @@
         <div class="pub-title">ImagePiece: Content-aware Re-tokenization for Efficient Image Recognition</div>
         <div class="pub-authors"><strong>Seungdong Yoa</strong>, Seungjun Lee, Hyeseung Cho, Bumsoo Kim, Woohyung Lim</div>
         <div class="pub-note">SOTA-efficiency re-tokenization for ViTs — 1.5× faster with a +0.39% accuracy gain.</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2412.16491" target="_blank" rel="noopener">arXiv</a></div>
       </div>
     </div>
 
