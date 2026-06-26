@@ -100,6 +100,18 @@
 
   /* ---------- HERO ---------- */
   header{padding:96px 0 72px;}
+  .hero-top{display:flex;gap:48px;align-items:flex-start;}
+  .hero-photo{flex:0 0 auto;margin-top:30px;}
+  .hero-photo img{
+    width:140px;height:140px;border-radius:50%;
+    object-fit:cover;display:block;
+    border:1px solid var(--line);
+  }
+  .hero-main{flex:1 1 auto;min-width:0;}
+  @media(max-width:560px){
+    .hero-top{flex-direction:column;gap:28px;}
+    .hero-photo img{width:112px;height:112px;}
+  }
   .eyebrow{
     font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;
     text-transform:uppercase;color:var(--accent);margin-bottom:26px;
@@ -146,7 +158,7 @@
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
     margin-top:54px;
   }
-  .metric{padding:24px 0;}
+  .metric{padding:24px 0 24px 16px;}
   .metric:not(:last-child){border-right:1px solid var(--line);}
   .metric-num{font-family:var(--serif);font-size:1.9rem;line-height:1;}
   .metric-label{
@@ -406,6 +418,11 @@
 
 <header>
   <div class="wrap">
+   <div class="hero-top">
+    <div class="hero-photo reveal">
+      <img src="assets/my_photo.jpeg" alt="Seungdong Yoa" width="140" height="140">
+    </div>
+    <div class="hero-main">
     <div class="eyebrow reveal">AI Research Scientist · Builder</div>
     <h1 class="reveal">Turning frontier&nbsp;research into systems that ship.</h1>
     <div class="hero-bio reveal">
@@ -433,6 +450,8 @@
       <a href="SeungdongYoa_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
     </div>
     <div class="hc-loc reveal">Seoul, Korea</div>
+    </div>
+   </div>
 
     <div class="metrics reveal">
       <div class="metric">
@@ -503,6 +522,7 @@
         <div class="pub-title">Efficient Multi-Agent Reasoning via Confidence-Guided Adaptive Debate</div>
         <div class="pub-authors"><strong>Seungdong Yoa</strong>, Ye Seul Sim, Suhee Yoon, Sanghyu Yoon, Dongmin Kim, Soonyoung Lee, Bumsoo Kim, Junhyun Lee</div>
         <div class="pub-note">A leader-centric debate framework reaching multi-agent reasoning accuracy at near single-agent token cost.</div>
+        <div class="pub-links"><a href="https://icml.cc/virtual/2026/poster/60593" target="_blank" rel="noopener">Link</a></div>
       </div>
     </div>
 
@@ -514,7 +534,7 @@
       <div>
         <div class="pub-title">From Static Benchmarks to Dynamic Protocol: Agent-Centric Text Anomaly Detection for Evaluating LLM Reasoning</div>
         <div class="pub-authors"><strong>Seungdong Yoa</strong>, Sanghyu Yoon, Suhee Yoon, Dongmin Kim, Ye Seul Sim, Junhyun Lee, Woohyung Lim</div>
-        <div class="pub-links"><a href="https://openreview.net/forum?id=9HacBDFOjt" target="_blank" rel="noopener">OpenReview</a></div>
+        <div class="pub-links"><a href="https://openreview.net/forum?id=9HacBDFOjt" target="_blank" rel="noopener">Link</a></div>
       </div>
     </div>
 
@@ -527,7 +547,7 @@
         <div class="pub-title">ImagePiece: Content-aware Re-tokenization for Efficient Image Recognition</div>
         <div class="pub-authors"><strong>Seungdong Yoa</strong>, Seungjun Lee, Hyeseung Cho, Bumsoo Kim, Woohyung Lim</div>
         <div class="pub-note">SOTA-efficiency re-tokenization for ViTs — 1.5× faster with a +0.39% accuracy gain.</div>
-        <div class="pub-links"><a href="https://arxiv.org/abs/2412.16491" target="_blank" rel="noopener">arXiv</a></div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2412.16491" target="_blank" rel="noopener">Link</a></div>
       </div>
     </div>
 
