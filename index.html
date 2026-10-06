@@ -154,7 +154,7 @@
 
   /* ---------- METRICS ---------- */
   .metrics{
-    display:grid;grid-template-columns:repeat(4,1fr);
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
     margin-top:54px;
   }
@@ -167,8 +167,7 @@
   }
   @media(max-width:560px){
     .metrics{grid-template-columns:repeat(2,1fr);}
-    .metric:nth-child(2){border-right:none;}
-    .metric:nth-child(1),.metric:nth-child(2){border-bottom:1px solid var(--line);}
+    .metric:nth-child(1){grid-column:1/-1;border-right:none;border-bottom:1px solid var(--line);}
   }
 
   /* ---------- SECTION ---------- */
@@ -455,12 +454,8 @@
 
     <div class="metrics reveal">
       <div class="metric">
-        <div class="metric-num">7</div>
-        <div class="metric-label">Publications</div>
-      </div>
-      <div class="metric">
         <div class="metric-num">4</div>
-        <div class="metric-label">NeurIPS · ICML<br>ICLR · AAAI</div>
+        <div class="metric-label">NeurIPS · ICML · ICLR · AAAI<br>First-author · 2025 – 2026</div>
       </div>
       <div class="metric">
         <div class="metric-num">'24</div>
@@ -534,7 +529,7 @@
         <div class="pub-title">Efficient Multi-Agent Reasoning via Confidence-Guided Adaptive Debate</div>
         <div class="pub-authors"><strong>Seungdong Yoa</strong>, Ye Seul Sim, Suhee Yoon, Sanghyu Yoon, Dongmin Kim, Soonyoung Lee, Bumsoo Kim, Junhyun Lee</div>
         <div class="pub-note">A leader-centric debate framework reaching multi-agent reasoning accuracy at near single-agent token cost.</div>
-        <div class="pub-links"><a href="https://icml.cc/virtual/2026/poster/60593" target="_blank" rel="noopener">Link</a></div>
+        <div class="pub-links"><a href="https://openreview.net/pdf?id=yh7LGBhFmr" target="_blank" rel="noopener">Link</a></div>
       </div>
     </div>
 
@@ -564,8 +559,18 @@
     </div>
 
     <details class="more-pubs reveal">
-      <summary>Three additional papers (IEEE Access, 2021) on self-supervised anomaly detection, surrogate losses, and meta-learning</summary>
+      <summary>Additional papers</summary>
       <div class="more-list">
+        <div class="more-item">
+          <div class="t">ReTabAD: A Benchmark for Restoring Semantic Context in Tabular Anomaly Detection</div>
+          <div class="a">S. Yoon, D. Kim, S. Yoon, Y. S. Sim, <strong>Seungdong Yoa</strong>, H. S. Cho, S. Lee, H. Lee, W. Lim</div>
+          <div class="v">ICLR · 2026</div>
+        </div>
+        <div class="more-item">
+          <div class="t">AutoAnoEval: Semantic-Aware Model Selection via Tree-Guided LLM Reasoning for Tabular Anomaly Detection</div>
+          <div class="a">S. Yoon, S. Yoon, Y. S. Sim, <strong>Seungdong Yoa</strong>, D. Kim, S. Lee, H. Lee, W. Lim</div>
+          <div class="v">FINDINGS OF EACL · 2026</div>
+        </div>
         <div class="more-item">
           <div class="t">Self-Supervised Learning for Anomaly Detection With Dynamic Local Augmentation</div>
           <div class="a"><strong>Seungdong Yoa</strong>, S. Lee, C. Kim, H. J. Kim</div>
